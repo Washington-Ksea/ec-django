@@ -1,0 +1,92 @@
+.jumbotron-extend {
+    position: relative;
+    height: 100vh;
+    min-height: 300px;
+    background-color: rgb(255, 214, 160);
+    background-size: cover;
+}
+
+.jumbotron-container {
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    padding-left: 10%;
+    padding-right: 30px;
+}
+
+.site-name {
+    margin-bottom: 40px;
+    font-family: 'Playfair Display', serif;
+}
+
+
+.button {
+    position: relative;
+    display: inline-block;
+    padding: .65em 4em;
+    border: 2px solid #333;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    margin-left: 20px;
+  }
+  .button::after {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    z-index: -1;
+    content: '';
+    width: 102%;
+    height: 102%;
+    background-color: #65ceff;
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+  .button:hover {
+    color: #fff;
+  }
+  .button:hover::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  @media only screen and (max-width: 767px) {
+    .button {
+        padding: .59.2em 2.4em;
+    }
+    
+}
+
+
+.conn-style:hover {
+     background-color: #e67e22;
+     border: 2px solid #fff;
+     color: #fff;
+
+    
+}
+
+
+.conn-style {
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    border: 2px solid #e67e22;
+    color: #e67e22;
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-left: 20px;
+    font-family: 'Avenir', serif;
+}
+
+.icon-style:hover {
+    transform: scale(1.2);
+}

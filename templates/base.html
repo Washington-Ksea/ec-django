@@ -7,9 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" type="text/css" href="#">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Vidaloka' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/queries.css' %}"> 
     {% block css %}{% endblock %}
     
 
@@ -17,13 +21,19 @@
 </head>
 <body>
     <!-- HEADER -->
-    {% include "header.html" with user=user path=request.path %}
+    {% include "header.html" %}
 
+    
+    
     {% block content %}
     {% endblock %}
     
+
+    
 </body>
-<script src="{static 'js/jquery-3.4.1.min.js'}"></script>
+<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
 
 
 {% block js%}

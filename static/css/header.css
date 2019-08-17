@@ -1,0 +1,32 @@
+.logo h1{
+    font-family: 'Vidaloka', serif;
+    text-align:center;
+    font-weight:normal;
+    color:rgb(245, 149, 40);
+}
+.maintitle{
+    display:block;
+    font-size:25px;
+    letter-spacing:-１px;
+    text-shadow:1px 1px 3px #888;
+}
+.description{
+    display:block;
+    font-size:15px;
+    letter-spacing:1px;
+    text-shadow:1px 1px 3px #888;
+}
+
+.site-header {
+    width: 100%;
+    height: auto;
+}
+
+nav .nav-item:hover{
+    border-bottom: 2px solid rgb(245, 149, 40);
+}
+
+nav .dropdown-item:hover{
+    border-bottom: 2px solid rgb(245, 149, 40);
+}
+

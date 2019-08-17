@@ -1,12 +1,42 @@
-<!DOCTYPE html>
-<html lang="js">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello djanog !!</h1>
-</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+
+{% block css%}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"> 
+{% endblock %}
+
+{% block js%}
+ 
+{% endblock %}
+
+{% block title %} {% endblock　%}
+
+
+{% block content %}
+    <section class="jumbotron jumbotron-extend">
+        <div class="container-fluid jumbotron-container">
+            <h1 class="site-name">EC-Django</h1>
+            <div class="d-flex flex-row selling-btn">
+                <p><span style="margin-left:20px"></span></p>
+                <h3><a class="btn button" href="#" role="button">商品を買う</a></h3>
+                <h3><a class="btn button" href="#" role="button">商品を売る</a></h3>
+            </div>
+
+            <h3 style="margin-top: 100px">訪問ありがとうございます。<br> kwashiのポートフォリオ用 ECサイトです。</h3>
+            <p>pythonのwebフレームワークであるDjangoを用いたECサイトです。<br>
+                stripeによる決済やカート機能など基本的な機能を集めています。<br> 
+                このサイトの紹介ページをQiitaに設けております。</p>
+
+            <div class="d-flex flex-row">
+                <p><span style="margin-left:20px"></span></p>
+                <p><a class="btn conn-style" href="#" role="button">CONTACT ME</a></p>
+                <p><a class="btn icon-style" href="https://twitter.com/kwashizzz"><img src="{% static '/images/icons8-twitter-128.png' %}" alt="Twitter icon"></a></p>
+            </div>
+
+
+            
+        </div>
+        
+    </section>
+    
+{% endblock %}

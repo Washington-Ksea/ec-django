@@ -1,0 +1,53 @@
+/* Big tablet to 1200px (widths smaller taht the 1140px row) */
+@media only screen and (max-width: 1200px) {
+    .hero-text-box,
+    .ion-social-twitter {
+        width: 100%;
+        padding: 0 2%;
+    }
+    
+    .row { padding: 0 2%; }
+}
+
+
+/* Small tablet to big tablet: from 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+    body { font-size: 18px; }
+    section { padding: 60px 0; }
+
+    .maintitle{
+        font-size:22px;
+    }
+    .description{
+        font-size:13px;
+    }
+    .btn {
+        font-size: 0.95rem
+    }
+
+}
+
+
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {
+    body { font-size: 16px; }
+    section { padding: 30px 0; }
+    
+   
+    h1 { font-size: 180%; }
+    h2 { font-size: 150%; }
+    .btn {
+        font-size: 0.8rem
+    }
+    
+}
+
+
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+    section { padding: 25px 0; }
+
+}
+

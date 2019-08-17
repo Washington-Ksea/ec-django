@@ -1,0 +1,47 @@
+{% load static %}
+
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container d-flex flex-row flex-md-row justify-content-between">
+            <a class="logo navbar-brand" href="#">
+                <h1>
+                    <span class="maintitle">EC Django 543</span>
+                    <span class="description">portfolio by kwashi</span>
+                </h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item {% if request.path == '/' %}active{% endif %}">
+                        <a class="nav-link" href="#">ホーム<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item {% if request.path|truncatewords:9 == '/products/' %}active{% endif %}">
+                        <a class="nav-link" href="#">商品一覧</a>
+                    </li>
+                    <li class="nav-item dropdown {% if request.path == '/accounts/login' %}active{% endif %}">
+                    {% if user.is_authenticated %}
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{user.username}}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">カート</a>
+                            <a class="dropdown-item" href="#">購入履歴</a>
+                            <a class="dropdown-item" href="#">お気に入り</a>
+                            <a class="dropdown-item" href="#">設定</a>
+                        </div>
+                    {% else %}
+                        <a class="nav-link" href="#">ログイン</a>
+                    {% endif %}
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:bandad.kw@gmail.com?subject=感想/お問い合わせ&amp;body=kwashiとコンタクト">Conntact me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
