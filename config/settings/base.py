@@ -88,7 +88,7 @@ AUTH_USER_MODEL = "main.User" #main/model.pyで設定予定のUserモデルを�
 LOGIN_REDIRECT_URL = 'home'
 
 #ログアウト処理後に遷移するURL
-ACCOUNT_LOGOUT_REDIRECT_URL = 'home'
+ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
